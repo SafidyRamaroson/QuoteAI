@@ -11,7 +11,7 @@ export function MyGithubLink() {
                 src='/assets/github.png'
                 alt='My Github Link'
                 width={303}
-                height={166}
+                height={166}    
                 priority
                 className="w-20 h-12"
             />
