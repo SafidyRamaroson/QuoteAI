@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { BorderBeam } from "../magicui/border-beam";
 
 
 export function MyGithubLink() {
