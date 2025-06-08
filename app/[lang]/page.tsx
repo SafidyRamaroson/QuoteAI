@@ -8,7 +8,7 @@ import { Sparkles } from "lucide-react";
 import { getDictionary } from "./dictionnaries";
 import React from "react";
 
-export const exampleQuotes: Quote[] = [
+const exampleQuotes: Quote[] = [
   {
     quote: "Même dans l'ombre, la graine sait qu'elle deviendra lumière.",
     type: 'Inspiration',
