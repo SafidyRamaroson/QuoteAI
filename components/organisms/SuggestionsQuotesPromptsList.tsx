@@ -1,19 +1,18 @@
 'use client';
 
-import { useLang } from "@/hooks/useLang";
 import { SuggestionQuotePrompt } from "../molecules/SuggestionQuoteItem";
-import { useEffect } from "react";
 
 type Props = {
     suggestions: string[]
 }
-export function SuggestionsQuotesPromptsList({suggestions}: Props){
+export function SuggestionsQuotesPromptsList({ suggestions }: Props) {
 
-    return(
+    return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-8 md:w-3/5 w-full mx-auto">
-            {suggestions?.map((suggestion) => {
-                return(
-                    <SuggestionQuotePrompt 
+            {suggestions?.map((suggestion, index) => {
+                return (
+                    <SuggestionQuotePrompt
+                        key={suggestion + index}
                         prompt={suggestion}
                     />
                 )
