@@ -13,7 +13,7 @@ export function MyGithubLink() {
                 width={225}
                 height={225}    
                 priority
-                className="w-8 h-8"
+                className="w-12 h-8"
             />
         </Link>
     )
