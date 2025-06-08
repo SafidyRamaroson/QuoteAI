@@ -1,0 +1,15 @@
+{
+    "home": {
+        "welcomeText": "Bienvenue sur QuoteAI !",
+       "description": "En quête d'inspiration pour une scène, un personnage ou une punchline mémorable ?\\nGlissez quelques mots, un thème, une émotion \\nl'outil vous souffle la citation qui fera vibrer vos lecteurs."
+    },
+    "quote": {
+        "suggestions": {
+            "1": "Écris une phrase poétique et motivante pour quelqu’un qui doute de sa plume.",
+            "2": "Génère une citation inspirante sur la persévérance, destinée à un écrivain en perte de confiance."
+        },
+        "textarea": {
+            "placeholder": "Décrivez une émotion, un thème, une idée… et laissez la magie opérer"
+        }
+    }
+}

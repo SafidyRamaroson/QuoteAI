@@ -1,7 +1,10 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+// hooks/useLang.ts
+'use client'
 
-type Lang = 'FR' | 'EN';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
+type Lang = 'fr' | 'en';
 interface LangContextValue {
   lang: Lang;
   toggleLang: () => void;
@@ -10,10 +13,23 @@ interface LangContextValue {
 const LangContext = createContext<LangContextValue | undefined>(undefined);
 
 export const LangProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLang] = useState<Lang>('FR');
+  const pathname = usePathname();
+  const router = useRouter();
+  const [lang, setLang] = useState<Lang>('fr');
+
+  useEffect(() => {
+    const langFromUrl = pathname.split('/')[1] as Lang;
+    if (['fr', 'en'].includes(langFromUrl)) {
+      setLang(langFromUrl);
+    }
+  }, [pathname]);
 
   const toggleLang = () => {
-    setLang((prev) => (prev === 'FR' ? 'EN' : 'FR'));
+    const newLang = lang === 'fr' ? 'en' : 'fr';
+    setLang(newLang);
+    
+    const newPath = pathname.replace(/^\/[a-z]{2}/, `/${newLang}`);
+    router.push(newPath);
   };
 
   const value: LangContextValue = {

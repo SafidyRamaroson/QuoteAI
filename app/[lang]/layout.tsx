@@ -15,17 +15,17 @@ export default async function LocaleRootLayout({
   params
 }: Readonly<{
   children: React.ReactNode,
-  params: Promise<{locale: string}>
+  params: Promise<{lang: string}>
 }>) {
 
-  const {locale} = await params;
+  const {lang} = await params;
 
-  if (langs.includes(locale)) {
+  if (!langs.includes(lang)) {
     notFound();
   }
 
   return (
-    <html lang={locale}>
+    <html lang={lang}>
       <body
         className={`${russoOne.variable} antialiased`}
       >

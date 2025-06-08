@@ -10,10 +10,10 @@ export function MyGithubLink() {
             <Image
                 src='/assets/github.png'
                 alt='My Github Link'
-                width={303}
-                height={166}    
+                width={225}
+                height={225}    
                 priority
-                className="w-20 h-12"
+                className="w-8 h-8"
             />
         </Link>
     )

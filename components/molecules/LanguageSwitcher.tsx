@@ -1,22 +1,19 @@
+'use client'
+
 import { Switch } from "@/components/ui/switch";
 import { useLang } from "@/hooks/useLang";
-import { useEffect } from "react";
-
 
 export function LanguageSwitcher() {
-    const { lang, toggleLang } = useLang();
+  const { lang, toggleLang } = useLang();
 
-    // useEffect(() =>{
-    //     alert(lang)
-    // }, [toggleLang])
-    return (
-        <p className="flex gap-2">
-            <span className="font-medium text-sm">EN</span>
-            <Switch
-                checked={lang === 'FR'}
-                onCheckedChange={toggleLang}
-            />
-            <span className="font-medium text-sm">FR</span>
-        </p>
-    )
+  return (
+    <div className="flex items-center gap-2">
+      <span className={`text-sm ${lang === 'en' ? 'font-bold' : 'opacity-50'}`}>EN</span>
+      <Switch
+        checked={lang === 'fr'}
+        onCheckedChange={toggleLang}
+      />
+      <span className={`text-sm ${lang === 'fr' ? 'font-bold' : 'opacity-50'}`}>FR</span>
+    </div>
+  );
 }

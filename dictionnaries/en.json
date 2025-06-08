@@ -1,0 +1,16 @@
+{
+    "home": {
+      "welcomeText": "Welcome to QuoteAI!",
+      "description": "Looking for inspiration for a scene, a character, or a memorable punchline?\\nDrop in a few words, a theme, an emotion \\nthe tool will whisper the quote that will resonate with your readers."
+    },
+    "quote": {
+      "suggestions": {
+        "1": "Write a poetic and uplifting line for someone doubting their writing talent.",
+        "2": "Generate an inspiring quote about perseverance, aimed at a writer who has lost confidence."
+      },
+      "textarea": {
+        "placeholder": "Describe an emotion, a theme, an idea… and let the magic happen"
+      }
+    }
+}
+  
