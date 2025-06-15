@@ -1,4 +1,4 @@
-export const fetchStrapi = async ({
+export const fetchResource = async ({
   resourceName,
   method = 'GET',
   body = {},
@@ -12,26 +12,23 @@ export const fetchStrapi = async ({
   headers?: HeadersInit;
 }) => {
   const response = await fetch(
-    `/api/${resourceName}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/${resourceName}`,
     {
       method,
       body:
         method !== 'GET'
           ? JSON.stringify(
-              type === 'content'
-                ? {
-                    data: body,
-                  }
-                : body
-            )
+            body
+          )
           : undefined,
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
         ...headers,
       },
     }
   );
+
+  console.log('response', response);
 
   if (!response.ok) {
     throw new Error('Failed to fetch resource name');
