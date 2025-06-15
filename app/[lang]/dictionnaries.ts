@@ -1,6 +1,6 @@
 import 'server-only';
 
-type Dictionary = typeof import('@/dictionnaries/fr.json');
+export type Dictionary = typeof import('@/dictionnaries/fr.json');
 
 const dictionaries: Record<'fr' | 'en', () => Promise<Dictionary>> = {
   fr: async () => (await import('@/dictionnaries/fr.json')).default,
