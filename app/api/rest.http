@@ -1,0 +1,6 @@
+POST http://localhost:3000/api/quote
+Content-Type: application/json
+
+{
+    "prompt": "Write twelves lines of a quote of happiness with their author"
+}
