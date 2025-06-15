@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function MyGithubLink() {
     return (
-        <Link href='https://github.com/SafidyRamaroson'>
+        <Link href='https://github.com/SafidyRamaroson/QuoteAI.git' target='_blank' rel='noopener noreferrer'>
             <Image
                 src='/assets/github.png'
                 alt='My Github Link'
