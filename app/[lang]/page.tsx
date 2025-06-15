@@ -19,7 +19,7 @@ export default async function Home({
   const suggestions = [dict.quote.suggestions[1], dict.quote.suggestions[2]];
 
   return (
-    <div className="relative w-screen min-h-screen bg-transparent">
+    <div className="relative min-h-screen bg-transparent">
       <div className="w-4/5 mx-auto h-full z-10">
         <Header />
         <h1 className="text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-transparent via-primary to-transparent text-3xl mt-24 mb-4">
