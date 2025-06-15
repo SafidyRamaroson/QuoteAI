@@ -2,6 +2,7 @@
 
 import { Quote } from "@/types";
 import { QuoteCardItem } from "../molecules/QuoteCardItem";
+import { copyToClipboard } from "@/lib/copyToClipboard";
 
 type Props = {
     quotes: Quote[]
@@ -14,7 +15,7 @@ export function QuotesList({ quotes }: Props) {
             <QuoteCardItem
                 key={index}
                 quote={quote}
-                onCopy={() => alert("Copying")}
+                onCopy={() => copyToClipboard(quote.quote)}
                 onVoice={() => alert('onVoicing')}
             />))}
         </div>

@@ -17,7 +17,7 @@ export function QuoteCardItem({ quote, onCopy, onVoice }: Props) {
                 <span className="text-xs uppercase font-semibold text-yellow-20">#{quote.type}</span>
                 <div className="flex flex-row items-center gap-2">
                     <AudioLines className="cursor-pointer" onClick={() => onVoice("1")}/>
-                    <Copy className="cursor-pointer" onClick={() => onCopy("1")}/>
+                    <Copy className="cursor-pointer" onClick={() => onCopy(quote.quote)}/>
                 </div>
             </div>
 

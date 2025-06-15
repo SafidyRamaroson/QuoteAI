@@ -3,6 +3,7 @@ import { russoOne } from "../fonts";
 import { langs } from "@/utils/lang";
 import {notFound} from 'next/navigation';
 import { Providers } from "../providers";
+import { Toaster } from "@/components/ui/sonner"
 import '@/app/style/globals.css'
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default async function LocaleRootLayout({
         <Providers>
         {children}
         </Providers>
+        <Toaster/>
       </body>
     </html>
   );
