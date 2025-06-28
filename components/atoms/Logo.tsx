@@ -6,9 +6,9 @@ export function Logo(){
         <Image
         src='/assets/logo.png'
         alt="Quote AI Logo"
-        width={50}
-        height={50}
-        className='bg-primary rounded-full'
+        width={40}
+        height={40}
+        className='rounded-full mt-2'
         />
     )
 }
