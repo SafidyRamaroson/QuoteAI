@@ -36,7 +36,7 @@ export function QuoteCardItem({ quote, onCopy, onVoice }: Props) {
 
             {/* Author info */}
             <div className="flex items-center gap-3 mt-2">
-                {quote.author.picture && (
+                {/* {quote.author.picture && (
                     <Image
                         src={quote.author.picture}
                         alt={quote.author.name}
@@ -45,6 +45,7 @@ export function QuoteCardItem({ quote, onCopy, onVoice }: Props) {
                         className="rounded-full"
                     />
                 )}
+                    */}
                 <div className="text-sm">
                     <p className="font-semibold">{quote.author.name}</p>
                 </div>
