@@ -9,6 +9,11 @@ import '@/app/style/globals.css'
 export const metadata: Metadata = {
   title: "QuoteAI – Générateur de citations inspirantes",
   description: "Générez des citations originales et percutantes grâce à l'intelligence artificielle. Sans inscription, instantané et personnalisable.",
+  icons: {
+    icon: '/favicon.png',
+  },
+  authors: [{ name: "Safidy RM", url: "https://github.com/SafidyRamaroson" }],
+  creator: "Safidy RM",
 };
 
 export default async function LocaleRootLayout({
